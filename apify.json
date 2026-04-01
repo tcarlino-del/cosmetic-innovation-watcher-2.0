@@ -1,0 +1,20 @@
+cat > apify.json << 'EOF'
+{
+  "name": "cosmetic-innovation-watcher",
+  "title": "Cosmetic Innovation Watcher",
+  "description": "Monitor cosmetic and health innovations across multiple sources",
+  "version": "1.0.0",
+  "buildTag": "latest",
+  "env": {
+    "PROXYCURL_API_KEY": {
+      "isRequired": false,
+      "description": "Proxycurl API key for LinkedIn enrichment"
+    },
+    "MAX_REQUESTS_PER_SOURCE": {
+      "isRequired": false,
+      "description": "Maximum requests per source",
+      "default": "50"
+    }
+  }
+}
+EOF
