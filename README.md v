@@ -1,0 +1,124 @@
+cat > README.md << 'EOF'
+# 🧴 Cosmetic Innovation Watcher
+
+An Apify actor that monitors cosmetic and health innovations worldwide.
+
+## 📌 Objective
+
+Automatically track new cosmetic/health products in:
+- R&D phase
+- Clinical tests
+- Pre-launch
+- Press announcements
+
+## ✨ Features
+
+- ✅ Multi-source scraping (News, Press Releases, Databases)
+- ✅ Company data enrichment with LinkedIn
+- ✅ Automatic CSV/JSON export
+- ✅ Daily scheduling
+- ✅ International coverage (France priority)
+
+## 📊 Data Collected
+
+For each product:
+1. Product name
+2. Description
+3. Type (cosmetic, dermo, biotech, etc.)
+4. Estimated launch date
+5. Company/Laboratory
+6. Country
+7. Source
+8. Contact information (LinkedIn, Email, Phone)
+
+## 🗺️ Coverage
+
+- 🇫🇷 France (Priority)
+- 🌍 International (USA, UK, Germany, Asia, etc.)
+
+## 🚀 Quick Start
+
+### Installation
+
+\`\`\`bash
+git clone https://github.com/tcarlino-del/cosmetic-innovation-watcher.git
+cd cosmetic-innovation-watcher
+npm install
+\`\`\`
+
+### Local Run
+
+\`\`\`bash
+npm start
+\`\`\`
+
+### Deploy to Apify
+
+\`\`\`bash
+apify push
+\`\`\`
+
+## 📋 Configuration
+
+Edit \`.env\` file:
+
+\`\`\`env
+PROXYCURL_API_KEY=your_key
+MAX_REQUESTS_PER_SOURCE=50
+\`\`\`
+
+## 📊 Output Format
+
+### JSON
+\`\`\`json
+{
+  "productName": "BeautyAI Pro",
+  "description": "AI-powered skincare",
+  "type": "biotech",
+  "launchDate": "2026-06-15",
+  "company": "InnovBeauty Labs",
+  "country": "France",
+  "source": "https://...",
+  "contactName": "Marie Dupont",
+  "contactRole": "Head of Innovation",
+  "contactLinkedIn": "https://...",
+  "contactEmail": "m.dupont@...",
+  "contactPhone": "+33 6 12 34 56 78"
+}
+\`\`\`
+
+## 🔄 Scheduling
+
+On Apify Console:
+1. Go to **Schedules**
+2. Create new schedule
+3. Set to run daily at 9:00 UTC
+
+## 📁 Project Structure
+
+\`\`\`
+cosmetic-innovation-watcher/
+├── main.js                    # Entry point
+├── package.json               # Dependencies
+├── Dockerfile                 # Container config
+├── apify.json                 # Apify settings
+├── .env.example               # Environment variables
+├── .gitignore                 # Git ignore
+├── README.md                  # This file
+└── outputs/                   # Export files
+    ├── results.json
+    └── results.csv
+\`\`\`
+
+## ✅ Status
+
+✨ Production ready
+
+## 📧 Support
+
+For issues or questions, open a GitHub issue.
+
+---
+
+**Last updated**: 2026-04-01
+EOF
